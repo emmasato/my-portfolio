@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+:root {
+  --header-height: 60vh;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+}
+
+header {
+  width: 100%;
+  min-height: var(--header-height);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  font-size: 6em;
+  font-weight: 900;
+  color: white;
+  padding: 1em;
+  /* animation magic */
+  transition: all 0.4s ease-in-out;
+  z-index: 9999;
+  top: 0;
+  position: fixed;
+  background: orangered;
+  background: rgba(255, 69, 0, 1);
+}
+
+.container {
+  width: 60%;
+  padding: 3em;
+  margin-left: auto;
+  margin-right: auto;
+  background: black;
+  color: white;
+}
+
+.shrink {
+  font-size: 2em;
+  min-height: 100px;
+  background: orangered;
+  background: rgba(255, 69, 0, 1);
+}
+
+a {
+  color: orangered;
+}
+h2 {
+  font-size: 2em;
+  font-weight: 600;
+  margin-bottom: 1em;
+}
+
+p {
+  margin-bottom: 1em;
+  line-height: 1.3;
+}
+
+/* Sticky */
+
+.sticky {
+  margin-top: var(--header-height);
+  width: 100vw;
+  height: 10vh;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 100px;
+  color: white;
+  background: #111;
+  padding: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
